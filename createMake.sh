@@ -20,16 +20,19 @@ function dotOIt()
 	sed -i "1s/.*/main: $dotOs/" makefile # Line 14-15: Append to some nth line in a file - https://unix.stackexchange.com/questions/162838/how-to-replace-the-first-line-using-sed - 19/11/2021
 	sed -i "2s/.*/\tg++ -g -Wall -Wextra -Werror -o main $dotOs/" makefile
 }
+
+#Get the first argument
 type=$1
 
-if [ -z "$type" ];
+if [ -z "$type" ]; # Check if the first argument is empty, if so get user input
 then
 	read -p "gcc or g++ ? " type
 fi
 
+#Depending on the type of compilter use the appropriate find command.
 case $type in
 "gcc")
-coutput=($(find ./ -type f -name "*.c"))
+coutput=($(find ./ -type f -name "*.c")) #Find file with a specific extension name and set that to a variable
 ;;
 "g++")
 cppoutput=($(find ./ -type f -name "*.cpp"))
@@ -40,13 +43,14 @@ exit 1
 ;;
 esac
 
+#Remove and create makefile
 if [ -f ./makefile ]; then
 	rm -f -r makefile
 else
 	touch makefile
-	sudo chmod 777 makefile
 fi
 
+# Write lines to makefile
 case $type in
 	"gcc")
 		srcfiles=$(echo -e ${coutput[@]})
