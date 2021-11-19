@@ -4,17 +4,19 @@
 #
 # Date created: 19/11/2021
 #
-# This script is free for use, any credit towards is NOT needed but greatly appreciated
+# This script is free for use, any credit towards the creator is NOT required, however greatly appreciated
 # This script should not be retailed or sold at a price on any e-shop.
 
 function dotOIt()
 {
+	#Remove the ./ at the start and .cpp or .c extension of the file
 	removeDot=`echo "$1" | cut -d'.' -f2` # Line 5-6 & 70-71: Remove certain parts of a string - https:/stackoverflow.com/questions/965053/extract-filename-and-extension-in-bash - 19/11/2021
 	dotO=`echo "$removeDot" | cut -d'/' -f2`
 
 	printf "\n$dotO.o:\t$1\n" >> makefile
 	printf "\tgcc -g -Wall -Wextra -Werror -c $1" >> makefile
 
+	#Append the .o to the file name use that for appending lines to a file
 	arrDotOs=(${arrDotOs[@]} "$dotO.o")
 	dotOs=$(echo -e ${arrDotOs[@]})
 	sed -i "1s/.*/main: $dotOs/" makefile # Line 14-15: Append to some nth line in a file - https://unix.stackexchange.com/questions/162838/how-to-replace-the-first-line-using-sed - 19/11/2021
