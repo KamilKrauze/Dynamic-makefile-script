@@ -10,10 +10,10 @@ This is a bash script that basically writes an entire makefile for you for the G
 2. Run the script in the terminal
 ```markdown
 $ bash ./createMake.sh <optional argument>
-```
+
 2.1. You can enter something for the optional argument like `gcc` or `g++`. If it is not entered then script will ask for a valid input either way.
 #### Example
-```markdown
+
 $ bash ./createMake.sh gcc
 
 $ bash ./createMake.sh g++
