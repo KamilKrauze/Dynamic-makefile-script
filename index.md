@@ -16,7 +16,5 @@ $ bash ./createMake.sh <optional argument>
 ```markdown
 $ bash ./createMake.sh gcc
 
-OR
-
 $ bash ./createMake.sh g++
 ```
