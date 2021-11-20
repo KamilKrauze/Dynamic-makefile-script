@@ -8,10 +8,8 @@ This is a bash script that basically writes an entire makefile for you for the G
 
 1. Place the script inside of your C/C++ project folder for it to work.
 2. Run the script in the terminal
-```code
-
-`$ bash ./createMake.sh <optional argument>`
-
+```markdown
+$ bash ./createMake.sh <optional argument>
 ```
 
 For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
