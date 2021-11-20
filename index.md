@@ -11,13 +11,12 @@ This is a bash script that basically writes an entire makefile for you for the G
 ```markdown
 $ bash ./createMake.sh <optional argument>
 ```
+2.1. You can enter something for the optional argument like `gcc` or `g++`. If it is not entered then script will ask for a valid input either way.
+#### Example
+```markdown
+$ bash ./createMake.sh gcc
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
+OR
 
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/KamilKrauze/Dynamic-makefile-script/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+$ bash ./createMake.sh g++
+```
