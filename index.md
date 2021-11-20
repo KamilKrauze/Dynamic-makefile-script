@@ -1,6 +1,8 @@
-## Welcome to GitHub Pages
+## The Bash Script
 
-You can use the [editor on GitHub](https://github.com/KamilKrauze/Dynamic-makefile-script/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This is a bash script that basically writes an entire makefile for you for the GCC or G++ compiler. You only require to run the script inside of the terminal of your linux distro.
+
+#### **NOTE: ** This script has been written and tested in Ubuntu OS, I do not know if it will run properly on other distros.
 
 Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
 
